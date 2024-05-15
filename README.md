@@ -11,13 +11,12 @@ $$ where~~\alpha = (1/n) $$
 ### Epsilon Greedy
 The epsilon greedy algorithm is a simple yet effective strategy for exploring and exploiting the arms of the multi-armed bandit. It chooses the arm with the highest estimated reward with probability (1 - epsilon), and a random arm with probability epsilon. This allows the algorithm to explore new arms while still exploiting the currently known best arm.
 
-$$ A \leftarrow
-\left\{
-\begin{array}{l}
-    argmax_{a} Q(a)~~~~with~probability~~1-\epsilon \\
-    random~action~~~~with~probability~~\epsilon \\
-\end{array}
-\right. 
+$$
+A \leftarrow
+\begin{cases}
+    \text{argmax}_{a} Q(a) & \text{with probability } 1-\epsilon \\
+    \text{random action} & \text{with probability } \epsilon \\
+\end{cases}
 $$
 
 ### Optimistic Initialization
